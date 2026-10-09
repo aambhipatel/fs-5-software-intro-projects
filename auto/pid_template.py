@@ -20,7 +20,7 @@ def make_car(desired_v:float=20.0, dt:float=0.1) -> dict:
     }
     return car_state_dictionary
 
-def update(car: dict, throttle_perc: float, mass: float = 1000, max_throttle_force: float = 5000, friction: float = 2.0) -> None:
+def update(car: dict, throttle_perc: float, mass: float = 1000, max_throttle_force: float = 5000, friction: float = 4.0) -> None:
         """
         Updates the car's state variables based on the throttle percentage.
         Use this function after finding throttle percentage to update the car's state variables.
