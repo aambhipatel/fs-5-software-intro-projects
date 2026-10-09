@@ -6,7 +6,7 @@ from pid_template import acceleration_to_throttle_percentage
 
 K_P = 2.0
 K_I = 0.5
-K_D = 0.0
+K_D = 0.1
  
 STEPS = 550
  
@@ -28,6 +28,7 @@ for i in range(STEPS):
 
 plt.subplot(211)
 plt.plot(car_times, car_velocity)
+plt.axhline(y=20.0, color='k', linestyle='--')
 plt.title("Velocity over Time")
 plt.xlabel("Time (s)")
 plt.ylabel("Velocity (m/s)")
@@ -40,6 +41,6 @@ plt.title("Error over Time")
 plt.xlabel("Time (s)")
 plt.ylabel("Error (m/s)")
 plt.grid(True)
-
+plt.tight_layout()
 
 plt.show()
